@@ -28,7 +28,7 @@ clinical_stage34 <-
   
 colnames(clinical_stage34) <- c("name", "stage")
 
-# Merge clinical and SNV data.
+# Merge clinical,SNV, and RNA-seq data.
 summary <- 
   left_join(clinical_stage34, snv_long, by = "name") %>% 
   left_join(rna_long, by = "name")
